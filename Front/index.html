@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon World</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
+</head>
+<body>
+    <header>
+        <div class="headerImg container-fluid mt-5">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+            ></img>           
+        </div>
+        
+        <h1><strong>World</strong></h1>
+    </header>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="container-fluid col-md-6 align-items-center">
+                <div class="col-md-12 definition">
+                    <section >
+                        <div class="texto">
+                            <h2>¿Qué es un Pokémon?</h2>
+                            <p>Los Pokémon son criaturas de diversas formas y tamaños que habitan el mundo Pokémon. Cada Pokémon tiene habilidades únicas y pertenece a uno o más tipos, como fuego, agua, planta, etc.</p>
+                        
+                        </div>
+                        <img src="https://i.pinimg.com/originals/5b/cb/1f/5bcb1fb548127afd202dc2665daf66a2.png"></img>
+                        
+                    </section>
+                </div>
+                <div class="col-md-12 preguntas">
+                    <section>
+                        <h2>Banco de Preguntas Pokémon</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="pregunta1">¿Cuántas generaciones de Pokémon existen?</label>
+                                <input type="text" class="form-control" id="pregunta1" placeholder="Tu respuesta">
+                            </div>
+                            <div class="form-group">
+                                <label for="pregunta2">¿Cuál es el Pokémon inicial de la región de Kanto?</label>
+                                <input type="text" class="form-control" id="pregunta2" placeholder="Tu respuesta">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Respuestas</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+            <div class="container-fluid col-md-6 align-items-center">
+                <section id="listPokemons">
+                    <h2>Lista de Pokémon</h2>
+                    <div class="container mt-5">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="buscarPokemon" placeholder="Buscar Pokemon">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="pokemon-card">
+                                <h3>Pikachu</h3>
+                                <img class="pokemon-image" src="https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a3/latest/20221013200240/Artwork_Pikachu_UNITE.png/800px-Artwork_Pikachu_UNITE.png" alt="Pikachu">
+                                <p>¡Pikachu es un Pokémon eléctrico muy querido por todos!</p>
+                            </div>
+                        </div>
+            
+                        <div class="col-sm-6 col-md-4">
+                            <div class="pokemon-card">
+                                <h3>Charizard</h3>
+                                <img class="pokemon-image" src="https://ssb.wiki.gallery/images/thumb/2/21/Charizard_SSBU.png/800px-Charizard_SSBU.png" alt="Charizard">
+                                <p>Charizard es un Pokémon de tipo fuego y volador, ¡muy poderoso!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    
+
+    
+    <img id="pokemonMovil" src="https://media.tenor.com/4K2_dLLq-pwAAAAj/charmander-chases-tail.gif" alt="Pikachu">
+
+    <footer>
+        <p>&copy; 2023 Pokémon World</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
