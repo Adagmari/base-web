@@ -111,3 +111,7 @@ footer {
         transform: translateX(0);
     }
 }
+.pokemon-card{
+    max-height: 300px;
+    height: 300px;
+}
