@@ -26,10 +26,15 @@ class PokemonService {
         const descript="Los tipos que existen son: "+data.types.map((type) => type.type.name).join(', ')+
                         " y tienen "+data.moves.length+" movimientos distintos.";
         const imagen=data.sprites['front_default'];
+        const peso=data.weight;
+        const cantSpecie=data.types.length;
 
         const dataResult ={
             "pokemon_description":descript,
-            "pokemon_image":imagen
+            "pokemon_image":imagen,
+            "pokemon_peso":peso,
+            "pokemon_cantSpecie":cantSpecie
+
         }
         return dataResult;
     }

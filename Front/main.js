@@ -1,17 +1,39 @@
-
-//var pokemons=[];
 var pokemons=[
     {
       "pokemon_name": "Pikachu",
       "pokemon_image": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/a/a3/latest/20221013200240/Artwork_Pikachu_UNITE.png/800px-Artwork_Pikachu_UNITE.png",
-      "pokemon_description": "¡Pikachu es un Pokémon eléctrico muy querido por todos!"
+      "pokemon_description": "¡Pikachu es un Pokémon eléctrico muy querido por todos!",
+      "pokemon_peso":80,
+      "pokemon_cantSpecie":1
     },
     {
       "pokemon_name": "Charizard",
       "pokemon_image": "https://ssb.wiki.gallery/images/thumb/2/21/Charizard_SSBU.png/800px-Charizard_SSBU.png",
-      "pokemon_description": "Charizard es un Pokémon de tipo fuego y volador, ¡muy poderoso!"
+      "pokemon_description": "Charizard es un Pokémon de tipo fuego y volador, ¡muy poderoso!",
+      "pokemon_peso":80,
+      "pokemon_cantSpecie":1
     }
 ];
+function ListComponent(props) {
+  const { datos } = props;
+
+  return (
+    React.createElement('div', null,
+      React.createElement('ul', null,
+        datos.map((elemento) => (
+          React.createElement('li', { key: elemento.pokemon_name },
+            React.createElement('strong', null, elemento.pokemon_name + ':'),
+            ' ',
+            'Existe '+elemento.pokemon_cantSpecie+' especie/s '+'y tienen un peso promedio de '+elemento.pokemon_peso
+          )
+        ))
+      )
+    )
+  );
+};
+
+//var pokemons=[];
+
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -53,6 +75,8 @@ async function getPokemons() {
           pokemonContainer.append(createCard(pokemons[i]));
           //console.log(pokemons[i]);
       };
+      ReactDOM.render(React.createElement(ListComponent, { datos: pokemons }), document.getElementById('listComponent'));
+
     } catch (error) {
       console.error('Error al obtener pokemons:', error);
     }
@@ -80,5 +104,6 @@ $("#buscarPokemon").on("input", function () {
 $(document).ready(function () {
     
     getPokemons();
+    
     
 });
